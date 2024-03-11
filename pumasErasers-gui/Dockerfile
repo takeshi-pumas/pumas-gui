@@ -1,7 +1,7 @@
 FROM node:20.11.0
 
-COPY erasers-gui /erasers-gui
-WORKDIR /erasers-gui
+COPY pumasErasers-gui /pumasErasers-gui
+WORKDIR /pumasErasers-gui
 
 RUN npm install
 
