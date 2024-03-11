@@ -6,7 +6,7 @@ Based on erasers gui
 ### Robot
 ```bash
 $ ssh administrator@hsrb.local
-$ git clone https://github.com/pumas-takeshi-gui/erasers-app.git
+$ git clone https://github.com/takeshi-pumas/pumas-takeshi-gui.git
 $ cd ~/erasers-app/erasers-gui && ./build.sh
 $ sudo cp ~/erasers-app/erasers-gui/erasers.gui.service /etc/systemd/system
 $ sudo systemctl enable erasers.gui.service
