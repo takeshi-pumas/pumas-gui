@@ -7,9 +7,9 @@ Based on erasers gui
 ```bash
 $ ssh administrator@hsrb.local
 $ git clone https://github.com/takeshi-pumas/pumas-takeshi-gui.git
-$ cd ~/erasers-app/erasers-gui && ./build.sh
-$ sudo cp ~/erasers-app/erasers-gui/erasers.gui.service /etc/systemd/system
-$ sudo systemctl enable erasers.gui.service
+$ cd ~/pumas-takeshi-gui/pumasErasers-gui && ./build.sh
+$ sudo cp ~/pumas-takeshi-gui/pumasErasers-gui/pumasErasers.gui.service /etc/systemd/system
+$ sudo systemctl enable pumasErasers.gui.service
 ```
 Automatically launch chromium gui when the HSR is powerd on. 
 1. Search for the Startup Application.
