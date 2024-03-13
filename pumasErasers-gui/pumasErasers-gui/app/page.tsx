@@ -114,7 +114,7 @@ export default function Home() {
               <BasicSpeedDial />
               <Grid bgcolor={"white"} textAlign={"center"} borderRadius={"10px"}>
                 <hr />
-                <Typography>PUMAS Team, by eR@serse</Typography>
+                <Typography>PUMAS Team, by eR@sers</Typography>
               </Grid>
 
             </Grid>
