@@ -7,8 +7,8 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'eR@sers gui',
-  description: 'eR@sers gui tools',
+  title: 'pumasER@sers gui',
+  description: 'pumasER@sers gui tools',
 }
 
 export default function RootLayout({
