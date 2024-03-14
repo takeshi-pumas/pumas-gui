@@ -5,7 +5,7 @@ import styles from './page.module.css'
 
 import { Box, Link, Grid, Card, Typography } from '@mui/material';
 
-import { MyModal, EmergencyModal, ImageModal ,MicrophoneModal} from './_components/modal'
+import { MyModal, EmergencyModal, ImageModal} from './_components/modal'
 import { useEffect, useState } from 'react';
 
 import ROSLIB from 'roslib'
@@ -27,7 +27,6 @@ export default function Home() {
   const [isEmergencyModalOpen, setIsEmergencyModalOpen] = useState(true);
   const [modalString, setModalString] = useState("");
   const [imageTopicName, setImageTopicName] = useState("");
-  const [isMicTopicOpen, setIsMicTopicOpen] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -73,19 +72,6 @@ export default function Home() {
       setImageTopicName(message.data);
     })
 
-    // ROS setting for MIC open sub
-    const micTopicNameSub = new ROSLIB.Topic({ ros: ros_interface.ros, name: '/talk_now', messageType: 'std_msgs/String' });
-    micTopicNameSub.subscribe(message => {
-      console.log("receive image topic name -> ", message.data)
-
-      if(message.data==""){
-        return
-      }
-      if(message.data =="start"){
-        setIsMicTopicOpen(message.data);
-      }
-      
-    })
 
     return () => {
       robotTTSSub.unsubscribe();
@@ -99,7 +85,6 @@ export default function Home() {
     <>
       <MyModal isOpen={isModalOpen} onClose={closeModal} modalString={modalString} />
       <EmergencyModal isOpen={isEmergencyModalOpen} />
-      <MicrophoneModal isOpen={isMicTopicOpen} />
       <ImageModal imageTopicName={imageTopicName} hostName={hostNname} />
 
       <main className={styles.fullPageBackground}>
