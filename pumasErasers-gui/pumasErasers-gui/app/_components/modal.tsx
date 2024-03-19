@@ -36,7 +36,7 @@ export function MyModal({ isOpen, onClose, modalString }) {
             >
                 <Box sx={style}>
                     <Typography id="modal-modal-title" variant="h3">
-                        Robot said (talk when led color -> WHITE)
+                        Robot said (talk when led color is WHITE)
                     </Typography>
                     <hr />
                     {/*<Typography id="modal-modal-description" sx={{ mt: 2 }} variant='h1' whiteSpace={'pre-line'}>
