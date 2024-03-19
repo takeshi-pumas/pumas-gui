@@ -36,7 +36,7 @@ export function MyModal({ isOpen, onClose, modalString }) {
             >
                 <Box sx={style}>
                     <Typography id="modal-modal-title" variant="h3">
-                        Robot said
+                        Robot said (talk when led color -> WHITE)
                     </Typography>
                     <hr />
                     {/*<Typography id="modal-modal-description" sx={{ mt: 2 }} variant='h1' whiteSpace={'pre-line'}>
@@ -78,10 +78,40 @@ export function EmergencyModal({ isOpen }) {
     )
 }
 
+export function MicrophoneModal({ data }) {
+
+    var isOpen = data == 'start';
+
+    return (
+        <>
+            <Modal
+                open={isOpen}
+                // onClose={onClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={{ ...style, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                    <Typography id="modal-modal-title" variant="h3">
+                        Microphone is Listening, talk NOW
+                    </Typography>
+                    <hr />
+                    <Box sx={{ position: 'relative', width: '90%', height: '90%' }}>
+                        <Image
+                            src="/microphone.png"
+                            alt="Description"
+                            fill
+                        />
+                    </Box>
+                </Box>
+            </Modal>
+        </>
+    )
+}
 
 export function ImageModal({ imageTopicName, hostName }) {
     var url = `http://${hostName}:8901/stream?topic=${imageTopicName}&type=ros_compressed`;
 
+    //var dataStart = data == 'Start'
     var isOpen = false;
     if (imageTopicName != "") {
         isOpen = true
