@@ -28,7 +28,7 @@ export default function Home() {
   const [modalString, setModalString] = useState("");
   const [imageTopicName, setImageTopicName] = useState("");
   const [isMicTopicOpen, setIsMicTopicOpen] = useState(false);
-  
+
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -95,7 +95,7 @@ export default function Home() {
       <MyModal isOpen={isModalOpen} onClose={closeModal} modalString={modalString} />
       <EmergencyModal isOpen={isEmergencyModalOpen} />
       <ImageModal imageTopicName={imageTopicName} hostName={hostNname} />
-      <MicrophoneModal isOpen={isMicTopicOpen} />
+      <MicrophoneModal data={isMicTopicOpen} />
       <main className={styles.fullPageBackground}>
         <div className={styles.backgroundBlur}>
 
