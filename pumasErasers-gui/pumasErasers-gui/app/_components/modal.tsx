@@ -80,12 +80,11 @@ export function EmergencyModal({ isOpen }) {
 
 export function MicrophoneModal({ data }) {
 
-    var isOpen = data == 'start';
 
     return (
         <>
             <Modal
-                open={isOpen}
+                open={data}
                 // onClose={onClose}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
