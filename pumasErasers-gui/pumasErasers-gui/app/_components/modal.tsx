@@ -109,11 +109,16 @@ export function MicrophoneModal({ data }) {
 
 export function ImageModal({ imageTopicName, hostName }) {
     var url = `http://${hostName}:8901/stream?topic=${imageTopicName}&type=ros_compressed`;
-    var newURL = `/${imageTopicName}`
+    var newURL = `/${imageTopicName}`;
     //var dataStart = data == 'Start'
+    var titleTEXT = "TEST";
     var isOpen = false;
     if (imageTopicName != "") {
         isOpen = true
+    }
+
+    if (imageTopicName =="pointingBAG.gif"){
+        titleTEXT = "Point at the bag, please"
     }
 
     return (
@@ -126,7 +131,7 @@ export function ImageModal({ imageTopicName, hostName }) {
             >
                 <Box sx={{ ...style, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                     <Typography id="modal-modal-title" variant="h3">
-                        IMAGE TEST:
+                        T: {titleTEXT}
                     </Typography>
                     <hr />
                     <Box sx={{ position: 'relative', width: '90%', height: '90%', textAlign: 'center' }}>
