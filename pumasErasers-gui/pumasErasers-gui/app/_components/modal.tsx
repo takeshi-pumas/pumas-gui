@@ -36,7 +36,7 @@ export function MyModal({ isOpen, onClose, modalString }) {
             >
                 <Box sx={style}>
                     <Typography id="modal-modal-title" variant="h3">
-                        Robot said (talk when led color is WHITE)
+                        Robot said (talk when LED color is WHITE)
                     </Typography>
                     <hr />
                     {/*<Typography id="modal-modal-description" sx={{ mt: 2 }} variant='h1' whiteSpace={'pre-line'}>
@@ -110,7 +110,7 @@ export function MicrophoneModal({ data }) {
 
 export function ImageModal({ imageTopicName, hostName }) {
     var url = `http://${hostName}:8901/stream?topic=${imageTopicName}&type=ros_compressed`;
-
+    var newURL = `/${imageTopicName}`
     //var dataStart = data == 'Start'
     var isOpen = false;
     if (imageTopicName != "") {
@@ -127,11 +127,11 @@ export function ImageModal({ imageTopicName, hostName }) {
             >
                 <Box sx={{ ...style, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                     <Typography id="modal-modal-title" variant="h3">
-                        Emergency Button Enable
+                        IMAGE TEST:
                     </Typography>
                     <hr />
                     <Box sx={{ position: 'relative', width: '90%', height: '90%', textAlign: 'center' }}>
-                        <img src={url} alt="dev logo" style={{ display: 'inline-block', verticalAlign: 'middle' }} />
+                        <img src={newURL} alt="dev logo" style={{ display: 'inline-block', verticalAlign: 'middle' }} />
                     </Box>
                 </Box>
             </Modal>
