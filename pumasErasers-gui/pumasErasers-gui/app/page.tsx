@@ -73,7 +73,7 @@ export default function Home() {
       setImageTopicName(message.data);
     })
 
-    const micTopicNameSub = new ROSLIB.Topic({ ros: ros_interface.ros, name: '/talk_now', messageType: 'std_msgs/String' });
+    const micTopicNameSub = new ROSLIB.Topic({ ros: ros_interface.ros, name: '/talk_now', messageType: 'std_msgs/Bool' });
     micTopicNameSub.subscribe(message => {
       console.log("receive image topic name -> ", message.data)
       setIsMicTopicOpen(message.data);
