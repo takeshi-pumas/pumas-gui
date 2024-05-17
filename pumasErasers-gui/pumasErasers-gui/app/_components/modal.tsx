@@ -120,6 +120,10 @@ export function ImageModal({ imageTopicName, hostName }) {
     if (imageTopicName =="pointingBAG.gif"){
         titleTEXT = "Point at the bag, please"
     }
+    
+    if (imageTopicName =="drinkingPose.gif"){
+        titleTEXT = "If possible, stay like this:"
+    }
 
     return (
         <>

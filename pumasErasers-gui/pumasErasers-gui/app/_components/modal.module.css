@@ -6,6 +6,7 @@
     width: 50%;
     height: 50%;
     transform: translateX(-50%) translateY(-50%);
-    z-index: 9999;
-    opacity:0.5;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.75):
+    overflow: auto;
 }
