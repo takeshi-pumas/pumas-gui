@@ -126,7 +126,7 @@ export function ImageModal({ imageTopicName, hostName }) {
     }
 
     if (imageTopicName =="trashPick.gif"){
-        titleTEXT = "If possible, stay like this:"
+        titleTEXT = "Please pickup the trash, thanks!"
     }
     
     return (
