@@ -125,6 +125,10 @@ export function ImageModal({ imageTopicName, hostName }) {
         titleTEXT = "If possible, stay like this:"
     }
 
+    if (imageTopicName =="trashPick.gif"){
+        titleTEXT = "If possible, stay like this:"
+    }
+    
     return (
         <>
             <Modal
@@ -135,11 +139,16 @@ export function ImageModal({ imageTopicName, hostName }) {
             >
                 <Box sx={{ ...style, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' ,fontSize: 5}}>
                     <Typography id="modal-modal-title" variant="h3">
-                        T: {titleTEXT}
+                        Robot: {titleTEXT}
                     </Typography>
                     <hr />
                     <Box sx={{ position: 'relative', width: '90%', height: '90%', textAlign: 'center' }}>
-                        <img src={newURL} alt="dev logo" style={{ display: 'inline-block', verticalAlign: 'middle' }} />
+                        <Image 
+                            src={newURL} 
+                            alt="dev logo" 
+                            //style={{ display: 'inline-block', verticalAlign: 'middle' }} 
+                            fill
+                        />
                     </Box>
                 </Box>
             </Modal>
