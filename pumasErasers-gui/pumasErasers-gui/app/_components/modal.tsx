@@ -133,8 +133,8 @@ export function ImageModal({ imageTopicName, hostName }) {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={{ ...style, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                    <Typography id="modal-modal-title" variant="h1">
+                <Box sx={{ ...style, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' ,fontSize: 5}}>
+                    <Typography id="modal-modal-title" variant="h3">
                         T: {titleTEXT}
                     </Typography>
                     <hr />
