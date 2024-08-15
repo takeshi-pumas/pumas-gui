@@ -74,10 +74,10 @@ export function EmergencyModal({ isOpen }) {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={{ ...styleWithImg, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                    <Typography id="modal-modal-title" variant="h3">
+                    <Typography id="modal-modal-title" variant="h6">
                         Emergency Button Enable
                     </Typography>
-                    <hr />
+                    
                     <Box sx={{ position: 'relative', width: '90%', height: '90%' }}>
                         <Image
                             src="/emergency.gif"
