@@ -37,7 +37,7 @@ export default function BasicSpeedDial() {
                 icon={<SpeedDialIcon />}
                 FabProps={{
                     sx: {
-                      bgcolor: 'red',
+                      bgcolor: 'blue',
                       '&:hover': {
                         bgcolor: 'red',
                       }

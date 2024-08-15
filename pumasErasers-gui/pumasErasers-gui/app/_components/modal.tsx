@@ -18,6 +18,19 @@ const style = {
     p: 4,
 };
 
+const styleWithImg = {
+    position: 'absolute' as 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: '90%',
+    height: '90%',
+    bgcolor: 'transparent',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+};
+
 const textstyle = {
     fontSize: "h1.fontSize",
     overflowWrap: "break-word",
@@ -60,7 +73,7 @@ export function EmergencyModal({ isOpen }) {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={{ ...style, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                <Box sx={{ ...styleWithImg, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                     <Typography id="modal-modal-title" variant="h3">
                         Emergency Button Enable
                     </Typography>
