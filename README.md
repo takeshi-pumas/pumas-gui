@@ -1,8 +1,8 @@
 # Pumas Takeshi GUI
 This is a web-based robot management and data visualization tool. 
-Based on erasers gui
+(Based on erasers gui repository)
 
-## Installation (PENDING MODIFICATION)
+## Installation (PENDING MODIFICATION AND/OR TEST)
 ### Robot
 ```bash
 $ ssh administrator@hsrb.local
